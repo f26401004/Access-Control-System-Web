@@ -1,0 +1,38 @@
+{
+    "name": "nckusu.com",
+    "displayName": "Access-Control-System-Web",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-browser": "cordova build browser && cordova run browser",
+        "build-android": "cordova build android && cordova run android"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "babel-core": "^6.26.3",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-runtime": "^6.26.0",
+        "browserify": "^16.2.2",
+        "cordova-android": "^7.0.0",
+        "cordova-browser": "^5.0.3",
+        "cordova-plugin-whitelist": "^1.3.3",
+        "envify": "^4.1.0",
+        "vue": "^2.5.16",
+        "vue-hot-reload-api": "^2.3.0",
+        "vue-resource": "^1.5.1",
+        "vueify": "^9.4.1"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {}
+        },
+        "platforms": [
+            "android",
+            "browser"
+        ]
+    }
+}
