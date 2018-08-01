@@ -22,14 +22,15 @@ const status = (number) => {
 }
 
 export default new Vuex.Store({
+    strict: true,
     debug: true,
     state: {
-        number: 1
+        number: 0
     },
     getters: {
-        getNumber: () => this.state.number,
-        getStatusDescription: () => {
-            return status(this.state.number)
+        getNumber: (state) => state.number,
+        getStatusDescription: (state) => {
+            return status(state.number)
         },
         numberMatches: (number) => {
             if (debug) {

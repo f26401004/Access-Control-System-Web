@@ -1,13 +1,12 @@
 <template>
     <div>
-        <h1> {{message}} </h1>
-        <login> </login>
-        <list> </list>
-        <command> </command>
-        <statistics> </statistics>
-        <open> </open>
-        <power> </power>
-        <block-list> </block-list>
+        <command v-show="this.$store.getters.getNumber !== 0"> </command>
+        <login v-show="this.$store.getters.getNumber === 0"> </login>
+        <list v-show="this.$store.getters.getNumber === 1"> </list>
+        <statistics v-show="this.$store.getters.getNumber === 2"> </statistics>
+        <open v-show="this.$store.getters.getNumber === 3"> </open>
+        <power v-show="this.$store.getters.getNumber === 4"> </power>
+        <block-list v-show="this.$store.getters.getNumber === 5"> </block-list>
     </div>    
 </template>
 
@@ -25,7 +24,6 @@ export default {
     name: 'custom-index',
     data() {
         return {
-            message: 'Access Control System'
         }
     },
     components: {
