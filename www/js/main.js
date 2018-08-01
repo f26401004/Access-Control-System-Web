@@ -1,9 +1,16 @@
-const Vue = require('vue');
-const Index = require('../pages/index.vue')
+import Vue from 'vue'
+import Vuex from 'vuex'
+import Store from '../js/store.js'
+import App from '../app.vue'
 
-const vue = new Vue({
+
+Vue.use(Vuex)
+
+const vm = new Vue({
     el: '#app',
-    render: function (createElement) {
-        return createElement(Index)
-    }
+    store: Store,
+    computed: {
+        status: () => this.store.getters.getStatusDescription()
+    },
+    render: (createElement) => createElement(App)
 });
