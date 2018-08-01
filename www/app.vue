@@ -4,14 +4,22 @@
         <login> </login>
         <list> </list>
         <command> </command>
+        <statistics> </statistics>
+        <open> </open>
+        <power> </power>
+        <block-list> </block-list>
     </div>    
 </template>
 
 <script>
 // import all component
-import LoginComponent from './components/login-component.vue'
-import ListComponent from './components/list-component.vue'
-import CommandComponent from './components/command-component.vue'
+import LoginComponent from './components/login.vue'
+import ListComponent from './components/list.vue'
+import CommandComponent from './components/command.vue'
+import StatisticsComponent from './components/statistics.vue'
+import OpenComponent from './components/open.vue'
+import PowerComponent from './components/power.vue'
+import BlockListComponent from './components/blocklist.vue'
 
 export default {
     name: 'custom-index',
@@ -23,7 +31,11 @@ export default {
     components: {
         Login: LoginComponent,
         List: ListComponent,
-        Command: CommandComponent
+        Command: CommandComponent,
+        Statistics: StatisticsComponent,
+        Open: OpenComponent,
+        Power: PowerComponent,
+        BlockList: BlockListComponent
     }
 }
 </script>

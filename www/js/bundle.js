@@ -9485,17 +9485,33 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _loginComponent = require('./components/login-component.vue');
+var _login = require('./components/login.vue');
 
-var _loginComponent2 = _interopRequireDefault(_loginComponent);
+var _login2 = _interopRequireDefault(_login);
 
-var _listComponent = require('./components/list-component.vue');
+var _list = require('./components/list.vue');
 
-var _listComponent2 = _interopRequireDefault(_listComponent);
+var _list2 = _interopRequireDefault(_list);
 
-var _commandComponent = require('./components/command-component.vue');
+var _command = require('./components/command.vue');
 
-var _commandComponent2 = _interopRequireDefault(_commandComponent);
+var _command2 = _interopRequireDefault(_command);
+
+var _statistics = require('./components/statistics.vue');
+
+var _statistics2 = _interopRequireDefault(_statistics);
+
+var _open = require('./components/open.vue');
+
+var _open2 = _interopRequireDefault(_open);
+
+var _power = require('./components/power.vue');
+
+var _power2 = _interopRequireDefault(_power);
+
+var _blocklist = require('./components/blocklist.vue');
+
+var _blocklist2 = _interopRequireDefault(_blocklist);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9508,16 +9524,20 @@ exports.default = {
     },
 
     components: {
-        Login: _loginComponent2.default,
-        List: _listComponent2.default,
-        Command: _commandComponent2.default
+        Login: _login2.default,
+        List: _list2.default,
+        Command: _command2.default,
+        Statistics: _statistics2.default,
+        Open: _open2.default,
+        Power: _power2.default,
+        BlockList: _blocklist2.default
     }
 };
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" "+_vm._s(_vm.message)+" ")]),_vm._v(" "),_c('login'),_vm._v(" "),_c('list'),_vm._v(" "),_c('command')],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" "+_vm._s(_vm.message)+" ")]),_vm._v(" "),_c('login'),_vm._v(" "),_c('list'),_vm._v(" "),_c('command'),_vm._v(" "),_c('statistics'),_vm._v(" "),_c('open'),_vm._v(" "),_c('power'),_vm._v(" "),_c('block-list')],1)}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-95095086"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
@@ -9530,7 +9550,34 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-95095086", __vue__options__)
   }
 })()}
-},{"./components/command-component.vue":7,"./components/list-component.vue":8,"./components/login-component.vue":9,"vue":4,"vue-hot-reload-api":3}],7:[function(require,module,exports){
+},{"./components/blocklist.vue":7,"./components/command.vue":8,"./components/list.vue":9,"./components/login.vue":10,"./components/open.vue":11,"./components/power.vue":12,"./components/statistics.vue":13,"vue":4,"vue-hot-reload-api":3}],7:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    name: 'blocklist'
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" BlockList Component ")])])}]
+__vue__options__._scopeId = "data-v-39d30986"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-39d30986", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-39d30986", __vue__options__)
+  }
+})()}
+},{"vue":4,"vue-hot-reload-api":3}],8:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -9546,18 +9593,18 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" Command Component ")])])}]
-__vue__options__._scopeId = "data-v-5949f654"
+__vue__options__._scopeId = "data-v-472ac6e6"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5949f654", __vue__options__)
+    hotAPI.createRecord("data-v-472ac6e6", __vue__options__)
   } else {
-    hotAPI.reload("data-v-5949f654", __vue__options__)
+    hotAPI.reload("data-v-472ac6e6", __vue__options__)
   }
 })()}
-},{"vue":4,"vue-hot-reload-api":3}],8:[function(require,module,exports){
+},{"vue":4,"vue-hot-reload-api":3}],9:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -9573,18 +9620,18 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" List Component ")])])}]
-__vue__options__._scopeId = "data-v-6300a243"
+__vue__options__._scopeId = "data-v-68e4d893"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6300a243", __vue__options__)
+    hotAPI.createRecord("data-v-68e4d893", __vue__options__)
   } else {
-    hotAPI.reload("data-v-6300a243", __vue__options__)
+    hotAPI.reload("data-v-68e4d893", __vue__options__)
   }
 })()}
-},{"vue":4,"vue-hot-reload-api":3}],9:[function(require,module,exports){
+},{"vue":4,"vue-hot-reload-api":3}],10:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -9600,18 +9647,99 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" Login Component ")])])}]
-__vue__options__._scopeId = "data-v-8ac14598"
+__vue__options__._scopeId = "data-v-ce5b4678"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8ac14598", __vue__options__)
+    hotAPI.createRecord("data-v-ce5b4678", __vue__options__)
   } else {
-    hotAPI.reload("data-v-8ac14598", __vue__options__)
+    hotAPI.reload("data-v-ce5b4678", __vue__options__)
   }
 })()}
-},{"vue":4,"vue-hot-reload-api":3}],10:[function(require,module,exports){
+},{"vue":4,"vue-hot-reload-api":3}],11:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    name: 'open'
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" Open Component ")])])}]
+__vue__options__._scopeId = "data-v-0ac8cf82"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0ac8cf82", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-0ac8cf82", __vue__options__)
+  }
+})()}
+},{"vue":4,"vue-hot-reload-api":3}],12:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    name: 'power'
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" Power Component ")])])}]
+__vue__options__._scopeId = "data-v-31acc860"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-31acc860", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-31acc860", __vue__options__)
+  }
+})()}
+},{"vue":4,"vue-hot-reload-api":3}],13:[function(require,module,exports){
+;(function(){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = {
+    name: 'statistics'
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v(" Statistics Component ")])])}]
+__vue__options__._scopeId = "data-v-5d7d94d8"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5d7d94d8", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-5d7d94d8", __vue__options__)
+  }
+})()}
+},{"vue":4,"vue-hot-reload-api":3}],14:[function(require,module,exports){
 'use strict';
 
 var _vue = require('vue');
@@ -9647,7 +9775,7 @@ var vm = new _vue2.default({
     }
 });
 
-},{"../app.vue":6,"../js/store.js":11,"vue":4,"vuex":5}],11:[function(require,module,exports){
+},{"../app.vue":6,"../js/store.js":15,"vue":4,"vuex":5}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9705,4 +9833,4 @@ exports.default = new Vuex.Store({
     }
 });
 
-},{"vue":4,"vuex":5}]},{},[10]);
+},{"vue":4,"vuex":5}]},{},[14]);
