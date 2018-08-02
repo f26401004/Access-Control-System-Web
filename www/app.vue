@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <command v-show="this.$store.getters.getNumber !== 0"> </command>
-        <login v-show="this.$store.getters.getNumber === 0"> </login>
-        <list v-show="this.$store.getters.getNumber === 1"> </list>
-        <statistics v-show="this.$store.getters.getNumber === 2"> </statistics>
-        <open v-show="this.$store.getters.getNumber === 3"> </open>
-        <power v-show="this.$store.getters.getNumber === 4"> </power>
-        <block-list v-show="this.$store.getters.getNumber === 5"> </block-list>
+    <div class="app">
+        <command id="command" v-if="this.$store.getters.getNumber !== 0"> </command>
+        <login id="login" v-if="this.$store.getters.getNumber === 0"> </login>
+        <list id="list" v-if="this.$store.getters.getNumber === 1"> </list>
+        <statistics id="statistics" v-if="this.$store.getters.getNumber === 2"> </statistics>
+        <open id="open" v-if="this.$store.getters.getNumber === 3"> </open>
+        <power id="power" v-if="this.$store.getters.getNumber === 4"> </power>
+        <block-list id="block-list" v-if="this.$store.getters.getNumber === 5"> </block-list>
     </div>    
 </template>
 
@@ -59,7 +59,23 @@ body {
     padding:0px;
     text-transform:uppercase;
     width:100%;
+
+
 }
+
+.app {
+    display: flex; 
+    position: absolute; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #1f6a5b; /* Old browsers */
+    background-image: -moz-radial-gradient(center, circle, #1f6a5b 0%, #19433b 100%); /* FF3.6-15 */
+    background-image: -webkit-radial-gradient(center, circle, #1f6a5b 0%,#19433b 100%); /* Chrome10-25,Safari5.1-6 */
+    background-image: radial-gradient(circle at center, #1f6a5b 0%,#19433b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     #app {
@@ -79,4 +95,5 @@ h1 {
     text-align:center;
     color: antiquewhite;
 }
+
 </style>

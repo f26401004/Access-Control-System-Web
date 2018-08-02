@@ -1,16 +1,28 @@
+const isAndroid = () => {
+    if( window.device.platform.match( /android/i ) ) {    
+        return true
+    }
+    return false
+}
+
 let app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+        this.bindEvents()
     },
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', this.onDeviceReady, false)
     },
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        app.receivedEvent('deviceready')
+        // modify the body zoom to fit the device.
+        if( isAndroid() ) {
+            document.body.style.zoom = 2 / window.devicePixelRatio
+        }
+        
     },
     receivedEvent: function(id) {
-        console.log('Received Event: ' + id);
+        console.log('Received Event: ' + id)
     },
 };
 
