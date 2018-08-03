@@ -1,12 +1,14 @@
 <template>
     <div class="app">
-        <command id="command" v-if="this.$store.getters.getNumber !== 0"> </command>
-        <login id="login" v-if="this.$store.getters.getNumber === 0"> </login>
-        <list id="list" v-if="this.$store.getters.getNumber === 1"> </list>
-        <statistics id="statistics" v-if="this.$store.getters.getNumber === 2"> </statistics>
-        <open id="open" v-if="this.$store.getters.getNumber === 3"> </open>
-        <power id="power" v-if="this.$store.getters.getNumber === 4"> </power>
-        <block-list id="block-list" v-if="this.$store.getters.getNumber === 5"> </block-list>
+        <div class="layout"> 
+            <command id="command" v-if="this.$store.getters.getNumber !== 0"> </command> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+            <login id="login" v-if="this.$store.getters.getNumber === 0"> </login>
+            <list id="list" v-if="this.$store.getters.getNumber === 1"> </list>
+            <statistics id="statistics" v-if="this.$store.getters.getNumber === 2"> </statistics>
+            <open id="open" v-if="this.$store.getters.getNumber === 3"> </open>
+            <power id="power" v-if="this.$store.getters.getNumber === 4"> </power>
+            <block-list id="block-list" v-if="this.$store.getters.getNumber === 5"> </block-list>
+        </div>
     </div>    
 </template>
 
@@ -65,15 +67,26 @@ body {
 
 .app {
     display: flex; 
-    position: absolute; 
     justify-content: center; 
     align-items: center;
+    position: absolute; 
     width: 100%;
     height: 100%;
     background-color: #1f6a5b; /* Old browsers */
     background-image: -moz-radial-gradient(center, circle, #1f6a5b 0%, #19433b 100%); /* FF3.6-15 */
     background-image: -webkit-radial-gradient(center, circle, #1f6a5b 0%,#19433b 100%); /* Chrome10-25,Safari5.1-6 */
     background-image: radial-gradient(circle at center, #1f6a5b 0%,#19433b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.layout {
+    display: grid;
+    justify-content: center; 
+    align-items: center;
+    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-areas:
+        "command"
+        "main";
+    width: 67%;
+    height: 88%;
 }
 
 /* Landscape layout (with min-width) */

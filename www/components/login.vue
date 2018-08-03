@@ -12,8 +12,7 @@
                 <input name="username" type="text" class="text-align-center"/> <br/>
                 <label> 密碼 password </label> <br/>
                 <input name="password" type="password" class="text-align-center"> <br/>
-                <button> 登入 Login </button> <br/>
-                <a class="float-right"> 註冊 Register </a>
+                <button v-on:click="login"> 登入 Login </button> <br/>
              </section>
         </transition>
             
@@ -28,6 +27,17 @@ export default {
         return {
             show: true
         }
+    },
+    methods: {
+        login: function () {
+            console.log(document)
+            const username = document.querySelectorAll('input')[0].value
+            const password = document.querySelectorAll('input')[1].value
+            // for the test of login.
+            if (username === 'admin' && username === 'admin') {
+                this.$store.commit('setStateNumber', 1)
+            }
+        }
     }
 }
 </script>
@@ -35,6 +45,7 @@ export default {
 <style scoped>
 
 div {
+    grid-area: 1 / 1 / span 2 / auto;
     display: grid;
     grid-template-rows: 3fr 1fr 3fr;
     grid-template-areas: 
