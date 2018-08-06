@@ -1,12 +1,19 @@
 <template>
     <div>
-        <h1> Statistics Component </h1>
+        <flowchart class="flow"></flowchart>
+        <typechart class="type"></typechart>
     </div>
 </template>
 
 <script>
+import Flowchart from './statistics-chart-flow.vue'
+import Typechart from './statistics-chart-type.vue'
 export default {
-    name: 'statistics'
+    name: 'statistics',
+    components: {
+        Flowchart,
+        Typechart
+    }
 }
 </script>
 
