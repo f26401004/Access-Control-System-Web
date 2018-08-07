@@ -2,7 +2,7 @@
     <div>
         <section> 
             <h1> 輸入學號/卡號 </h1>
-            <input type="text"> </input> <br/>
+            <input type="text"/> <br/>
             <button v-on:click="open"> 解鎖 </button>
         </section>
     </div>

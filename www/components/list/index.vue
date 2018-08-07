@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import ListTable from './list-table.vue'
+import ListTable from './table.vue'
 
 export default {
     name: 'list',

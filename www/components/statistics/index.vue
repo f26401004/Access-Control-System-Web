@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Flowchart from './statistics-chart-flow.vue'
-import Typechart from './statistics-chart-type.vue'
+import Flowchart from './chart-flow.vue'
+import Typechart from './chart-type.vue'
 export default {
     name: 'statistics',
     components: {

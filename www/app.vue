@@ -1,7 +1,7 @@
 <template>
     <div class="app">
         <div class="layout"> 
-            <command id="command" v-if="this.$store.getters.getNumber !== 0"> </command> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+            <command id="command" v-if="this.$store.getters.getNumber !== 0"/>
             <div class="main">
                 <login id="login" v-if="this.$store.getters.getNumber === 0"> </login>
                 <list id="list" v-if="this.$store.getters.getNumber === 1"> </list>
@@ -16,13 +16,13 @@
 
 <script>
 // import all component
-import LoginComponent from './components/login.vue'
-import ListComponent from './components/list.vue'
+import LoginComponent from './components/login/index.vue'
+import ListComponent from './components/list/index.vue'
 import CommandComponent from './components/command.vue'
-import StatisticsComponent from './components/statistics.vue'
-import OpenComponent from './components/open.vue'
-import PowerComponent from './components/power.vue'
-import BlockListComponent from './components/blocklist.vue'
+import StatisticsComponent from './components/statistics/index.vue'
+import OpenComponent from './components/open/index.vue'
+import PowerComponent from './components/power/index.vue'
+import BlockListComponent from './components/blocklist/index.vue'
 
 export default {
     name: 'custom-index',
