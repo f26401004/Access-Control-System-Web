@@ -17,7 +17,7 @@ const status = (number) => {
         case 4:
             return "Power"
         case 5:
-            return "BlackList"
+            return "BlockList"
     }
 }
 
@@ -33,18 +33,14 @@ export default new Vuex.Store({
             return status(state.number)
         },
         numberMatches: (number) => {
-            if (debug) {
-                console.log(`this.state.number === number : ${this.state.number === number}`)
-            }
+            console.log(`state.number === number : ${this.state.number === number}`)
             return this.state.number === number
         },
     },
-    setters: {
-        setStateNumber: (number) => {
-            if (debug) {
-                console.log(`this.state.number = ${number}`)
-            }
-            this.state.number = number
+    mutations: {
+        setStateNumber: (state, number) => {
+            console.log(`state.number = ${state.number}`)
+            state.number = number
         }
     }
 })

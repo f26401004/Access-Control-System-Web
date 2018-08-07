@@ -20,14 +20,14 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-body {
+#container {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background: #1f6a5b; /* Old browsers */
-    background: -moz-radial-gradient(center, circle, #1f6a5b 0%, #19433b 100%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, circle, #1f6a5b 0%,#19433b 100%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(circle at center, #1f6a5b 0%,#19433b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-color: #1f6a5b; /* Old browsers */
+    background-image: -moz-radial-gradient(center, circle, #1f6a5b 0%, #19433b 100%); /* FF3.6-15 */
+    background-image: -webkit-radial-gradient(center, circle, #1f6a5b 0%,#19433b 100%); /* Chrome10-25,Safari5.1-6 */
+    background-image: radial-gradient(circle at center, #1f6a5b 0%,#19433b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;

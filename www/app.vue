@@ -10,7 +10,6 @@
                 <power id="power" v-if="this.$store.getters.getNumber === 4"> </power>
                 <block-list id="block-list" v-if="this.$store.getters.getNumber === 5"> </block-list>
             </div>
-            
         </div>
     </div>    
 </template>
