@@ -1,51 +1,102 @@
 <template>
-    <div id="wrapper">
-        <div>
-            <img src="https://i.imgur.com/9mqnLHV.png" style="display: block; margin: auto;"/>
-            <h1 style="margin: 1em;"> Access Control System </h1>
-            <section class="text-align-center"> 
-                <label class="float-right"> 帳號 username </label> <br/>
+    <div>
+        <transition name="slide-fade" appear>
+            <img v-show="show" src="https://i.imgur.com/9mqnLHV.png"/>
+        </transition>
+        <transition name="slide-fade" appear>
+            <h1 v-show="show"> NCKUCU <br/> Access Control System </h1>
+        </transition> 
+        <transition name="slide-fade" appear>
+            <section v-show="show" class="text-align-center"> 
+                <label> 帳號 username </label> <br/>
                 <input name="username" type="text" class="text-align-center"/> <br/>
-                <label class="float-right"> 密碼 password </label> <br/>
+                <label> 密碼 password </label> <br/>
                 <input name="password" type="password" class="text-align-center"> <br/>
-            </section>
-        </div>
-
+                <button v-on:click="login"> 登入 Login </button> <br/>
+             </section>
+        </transition>
+            
     </div>
+
 </template>
 
 <script>
 export default {
-    name: 'login'
+    name: 'login',
+    data() {
+        return {
+            show: true
+        }
+    },
+    methods: {
+        login: function () {
+            console.log(document)
+            const username = document.querySelectorAll('input')[0].value
+            const password = document.querySelectorAll('input')[1].value
+            // for the test of login.
+            if (username === 'admin' && username === 'admin') {
+                this.$store.commit('setStateNumber', 1)
+            }
+        }
+    }
 }
 </script>
 
 <style scoped>
-#wrapper {
-    display: flex;
-    position: absolute;
-    margin: auto;
-    width: 100%;
-    height: 100%;
+
+div {
+    grid-area: 1 / 1 / span 2 / auto;
+    display: grid;
+    grid-template-rows: 3fr 1fr 3fr;
+    grid-template-areas: 
+        "logo"
+        "title"
+        "login";
     align-items: center;
+    align-content: center;
     justify-content: center;
 }
+img {
+    grid-area: logo;
+    margin: auto;
+}
+
+h1 {
+    grid-area: title;
+}
+
 section {
-    width: 18.6em;
-    height: 12em;
+    grid-area: login;
+
     margin: 0px auto;
-    padding: 0px;
+    padding: 1em;
 }
 input {
     width: 15em;
     height: 2em;
-    margin: .8em;
+    margin: 1em;
     border-radius: 1em;
+    font-size: 18px;
 }
+a {
+    margin-right: 0.5em;
+    color: antiquewhite;
+}
+
 label {
     font-size: 12px;
     margin-right: 1em;
     color: antiquewhite;
+}
+
+button {
+    width: 18em;
+    height: 2.5em;
+    margin-top: 1em;
+    background-color: #b0a46f;
+    color: antiquewhite;
+    font-size: 18px;
+    text-align: center;
 }
 
 .text-align-center {
@@ -55,4 +106,14 @@ label {
 .float-right {
     float: right;
 }
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(2.5em);
+  opacity: 0;
+}
+
 </style>

@@ -24,6 +24,7 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <hook src="hooks/vueify-build.js" type="before_compile" />
+    <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <engine name="android" spec="^7.0.0" />
     <engine name="browser" spec="^5.0.3" />
 </widget>
