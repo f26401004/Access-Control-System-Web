@@ -25,6 +25,12 @@
     </platform>
     <hook src="hooks/vueify-build.js" type="before_compile" />
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
-    <engine name="android" spec="^7.0.0" />
+    <chcp>
+        <auto-download enabled="true" />
+        <auto-install enabled="true" />
+        <local-development enabled="true" />
+        <config-file url="" />
+    </chcp>
+    <engine name="android" spec="^7.1.1" />
     <engine name="browser" spec="^5.0.3" />
 </widget>

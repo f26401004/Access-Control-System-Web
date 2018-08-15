@@ -3,32 +3,18 @@
         <div class="header">紀錄列表</div>
         <table cellspacing="0">
             <tr>
-                <th>Name</th>
-                <th>CardUD</th>
-                <th>Department</th>
-                <th>Privilege</th>
-                <th>Time</th>
+                <th> Name </th>
+                <th> CardID </th>
+                <th> Department </th>
+                <th> Privilege </th>
+                <th> Time </th>
             </tr>
-            <tr>
-                <td>黃俊豪</td>
-                <td>2012301243000</td>
-                <td>CSIE</td>
-                <td>Superadmin</td>
-                <td>2018-07-31 16:21:34 PM</td>
-            </tr>
-            <tr>
-                <td>黃俊豪</td>
-                <td>2012301243000</td>
-                <td>CSIE</td>
-                <td>Superadmin</td>
-                <td>2018-07-31 16:45:21 PM</td>
-            </tr>
-            <tr>
-                <td>黃俊豪</td>
-                <td>2012301243000</td>
-                <td>CSIE</td>
-                <td>Superadmin</td>
-                <td>2018-07-31 20:10:54 PM</td>
+            <tr v-for="element in this.records">
+                <td> {{element.name}} </td>
+                <td> {{element.cardid}} </td>
+                <td> {{element.department}} </td>
+                <td> {{element.privilege}} </td>
+                <td> {{element.time}} </td>
             </tr>
         </table>
     </div>    
@@ -36,7 +22,20 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+            records: null
+        }
+    },
+    created() {
+        // fetch all records from database.
+        fetch('http://localhost:3000/record/getAllRecord', {method: 'GET'}).then(response => { 
+            return response.json();
+        }).then(data => {
+            this.records = data;
+            return data;
+        })
+    }
 }
 </script>
 

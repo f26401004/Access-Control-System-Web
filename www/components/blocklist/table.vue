@@ -4,38 +4,20 @@
         <table cellspacing="0">
             <tr>
                 <th>Name</th>
-                <th>CardUD</th>
+                <th>CardiD</th>
                 <th>Department</th>
                 <th>Privilege</th>
                 <th>Since</th>
                 <th>Expire</th>
                 <th>Remove</th>
             </tr>
-            <tr>
-                <td>黃俊豪</td>
-                <td>2012301243000</td>
-                <td>CSIE</td>
-                <td>Superadmin</td>
-                <td>2018-07-31 16:21:34 PM</td>
-                <td>2018-08-01 16:21:34 PM</td>
-                <td> <button> 移除 </button> </td>
-            </tr>
-            <tr>
-                <td>黃俊豪</td>
-                <td>2012301243000</td>
-                <td>CSIE</td>
-                <td>Superadmin</td>
-                <td>2018-07-31 16:21:34 PM</td>
-                <td>2018-08-01 16:21:34 PM</td>
-                <td> <button> 移除 </button> </td>
-            </tr>
-            <tr>
-                <td>黃俊豪</td>
-                <td>2012301243000</td>
-                <td>CSIE</td>
-                <td>Superadmin</td>
-                <td>2018-07-31 16:21:34 PM</td>
-                <td>2018-08-01 16:21:34 PM</td>
+            <tr v-for="element in this.records">
+                <td> {{element.name}} </td>
+                <td> {{element.cardid}} </td>
+                <td> {{element.department}} </td>
+                <td> {{element.privilege}} </td>
+                <td> {{element.since}} </td>
+                <td> {{element.expire}} </td>
                 <td> <button> 移除 </button> </td>
             </tr>
         </table>
@@ -44,6 +26,20 @@
 
 <script>
 export default {
+    data() {
+        return {
+            records: null
+        }
+    },
+    created() {
+        // fetch all blocklist records from database.
+        fetch('http://localhost:3000/blocklist/getAllBlocklistRecord', {method: 'GET'}).then(response => { 
+            return response.json();
+        }).then(data => {
+            this.records = data;
+            return data;
+        })
+    }
 }
 </script>
 
