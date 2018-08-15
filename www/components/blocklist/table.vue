@@ -31,13 +31,12 @@ export default {
             records: null
         }
     },
-    created() {
+    mounted() {
         // fetch all blocklist records from database.
         fetch('http://localhost:3000/blocklist/getAllBlocklistRecord', {method: 'GET'}).then(response => { 
             return response.json();
         }).then(data => {
             this.records = data;
-            return data;
         })
     }
 }

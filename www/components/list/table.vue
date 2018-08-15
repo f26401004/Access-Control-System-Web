@@ -27,13 +27,12 @@ export default {
             records: null
         }
     },
-    created() {
+    mounted() {
         // fetch all records from database.
         fetch('http://localhost:3000/record/getAllRecord', {method: 'GET'}).then(response => { 
             return response.json();
         }).then(data => {
             this.records = data;
-            return data;
         })
     }
 }
